@@ -1,0 +1,32 @@
+body {
+	background-color: #f4f4f4;
+}
+
+.body-content {
+	background-color: #fff;
+	padding: 1em 3em;
+}
+
+.jumbotron {
+	background-color: #006699;
+	color: #fff;
+	padding-bottom: 6em;
+}
+
+.btn-primary {
+	background-color: #006699;
+	color: #fff;
+	width: 100%;
+}
+
+.control-label {
+	text-align: left!important;
+}
+
+.logo {
+	float: left;
+	width: 20%;
+	margin-right: 5em;
+	margin-top: 2em;
+
+}
