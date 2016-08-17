@@ -16,30 +16,35 @@ h1.cardTitle {
 h2.cardSup {
 font-size: 1.3em;
 text-align: right;
+padding-top: 1.3em;
 }
 
 h1.hex:before {
   content: "#";
 }
 
-.row {
-  margin-top: 15em;
-  padding: 0px 50px;
+.cardTitleContainer {
+  height: 100px;
 }
 
+
+#content {
+  margin-top: 10em;
+  background-color: #fff;
+}
 
 .colorBox {
   margin: 50px 0px 30px;
 }
 
 .colorSquare {
-  height: 20vh;
+  height: 50vh;
   transition: 1s;
 }
 
 .colorValues {
   height: 5em;
-  padding-top: 5em;
+  padding-top: 15em;
 }
 
 input {
