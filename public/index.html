@@ -15,8 +15,19 @@
   </head>
 
   <body>
-    <div id="content" class="col-md-4 col-md-offset-4"></div>
+  <div class="row">
+  <h1 class="cardTitle">hex_to_rgb_converter_react</h1>
+    <h2 class="cardSup">By Dave Bitter</h2>
+  <div class="col-md-12">
+    
+    </div>
+    <div id="card1" class="col-md-2 col-md-offset-1"></div>
+    <div id="card2" class="col-md-2"></div>
+    <div id="card3" class="col-md-2"></div>
+    <div id="card4" class="col-md-2"></div>
+    <div id="card5" class="col-md-2"></div>
 
+    </div>
 
     <script type="text/babel">
        var ColorBox = React.createClass ({
@@ -28,8 +39,7 @@
           console.log(this.state.color, this.state.rgbcolor);
           return (
               <div className="colorBox col-md-12">
-                <h1 className="cardTitle">hex_to_rgb_converter_react</h1>
-                <h2 className="cardSup">By Dave Bitter</h2>
+                
                 <ColorSquare  bgColor={this.state.color} rgbcolor={this.state.rgbcolor} />
                 <ColorInput onAdd={this._handleClicker} onColorChange={this._colorChange}/>
               </div>
@@ -98,7 +108,7 @@
      
             <div className="input-group">
             <span className="input-group-addon">#</span>
-              <input className="colorInput form-control" onChange={this.handleColorChange} autoFocus="autoFocus">
+              <input className="colorInput form-control" onChange={this.handleColorChange} autoFocus="autoFocus" maxLength="6" >
                   
               </input>
             </div>
@@ -108,8 +118,28 @@
 
       ReactDOM.render(
           <ColorBox />,
-          document.getElementById('content')
+          document.getElementById('card1')
         );
+
+      ReactDOM.render(
+          <ColorBox />,
+          document.getElementById('card2')
+        );
+      ReactDOM.render(
+          <ColorBox />,
+          document.getElementById('card3')
+        );
+
+      ReactDOM.render(
+          <ColorBox />,
+          document.getElementById('card4')
+        );
+      ReactDOM.render(
+          <ColorBox />,
+          document.getElementById('card5')
+        );
+
+
 
     </script>
   </body>

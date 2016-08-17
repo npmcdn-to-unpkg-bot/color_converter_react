@@ -22,24 +22,24 @@ h1.hex:before {
   content: "#";
 }
 
-
-#content {
-  margin-top: 10em;
-  background-color: #fff;
+.row {
+  margin-top: 15em;
+  padding: 0px 50px;
 }
+
 
 .colorBox {
   margin: 50px 0px 30px;
 }
 
 .colorSquare {
-  height: 50vh;
+  height: 20vh;
   transition: 1s;
 }
 
 .colorValues {
   height: 5em;
-  padding-top: 15em;
+  padding-top: 5em;
 }
 
 input {
