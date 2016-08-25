@@ -1,0 +1,357 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/davebitter/.nvm/versions/node/v4.4.6/bin/node',
+1 verbose cli   '/home/davebitter/.nvm/versions/node/v4.4.6/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--save',
+1 verbose cli   'redux-localstorage@rc' ]
+2 info using npm@2.15.5
+3 info using node@v4.4.6
+4 verbose install initial load of /home/davebitter/Documents/react/package.json
+5 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/autoprefixer/package.json
+6 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/babel-core/package.json
+7 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/babel-eslint/package.json
+8 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/babel-loader/package.json
+9 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/babel-polyfill/package.json
+10 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/babel-preset-es2015/package.json
+11 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/babel-preset-react/package.json
+12 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/babel-register/package.json
+13 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/browser-sync/package.json
+14 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/browser-sync-spa/package.json
+15 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/classnames/package.json
+16 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/css-loader/package.json
+17 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/del/package.json
+18 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/es6-shim/package.json
+19 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/eslint/package.json
+20 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/eslint-config-xo-react/package.json
+21 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/eslint-config-xo-space/package.json
+22 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/eslint-loader/package.json
+23 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/eslint-plugin-babel/package.json
+24 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/eslint-plugin-react/package.json
+25 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/extract-text-webpack-plugin/package.json
+26 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp/package.json
+27 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-autoprefixer/package.json
+28 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-babel/package.json
+29 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-cache/package.json
+30 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-cssnano/package.json
+31 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-eslint/package.json
+32 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-filter/package.json
+33 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-htmlmin/package.json
+34 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-hub/package.json
+35 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-if/package.json
+36 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-imagemin/package.json
+37 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-less/package.json
+38 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-load-plugins/package.json
+39 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-plumber/package.json
+40 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-size/package.json
+41 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-sourcemaps/package.json
+42 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-uglify/package.json
+43 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-useref/package.json
+44 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/gulp-util/package.json
+45 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/html-webpack-plugin/package.json
+46 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/isparta-loader/package.json
+47 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/jasmine/package.json
+48 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/jasmine-core/package.json
+49 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/json-loader/package.json
+50 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/karma/package.json
+51 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/karma-coverage/package.json
+52 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/karma-jasmine/package.json
+53 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/karma-junit-reporter/package.json
+54 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/karma-phantomjs-launcher/package.json
+55 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/karma-phantomjs-shim/package.json
+56 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/karma-webpack/package.json
+57 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/less/package.json
+58 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/less-loader/package.json
+59 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/main-bower-files/package.json
+60 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/phantomjs-prebuilt/package.json
+61 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/postcss-loader/package.json
+62 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/react/package.json
+63 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/react-addons-test-utils/package.json
+64 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/react-dom/package.json
+65 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/react-hot-loader/package.json
+66 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/react-redux/package.json
+67 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/react-router/package.json
+68 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/redux/package.json
+69 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/style-loader/package.json
+70 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/todomvc-app-css/package.json
+71 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/webpack/package.json
+72 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/webpack-dev-middleware/package.json
+73 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/webpack-hot-middleware/package.json
+74 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/webpack-split-by-path/package.json
+75 verbose installManyTop reading scoped package data from /home/davebitter/Documents/react/node_modules/wiredep/package.json
+76 info package.json eslint-plugin-react@5.2.2 No README data
+77 info package.json webpack@2.1.0-beta.8 No README data
+78 info package.json wiredep@2.2.2 No license field.
+79 info package.json less-loader@2.2.3 No license field.
+80 info package.json webpack-dev-middleware@1.6.1 No license field.
+81 verbose readDependencies loading dependencies from /home/davebitter/Documents/react/package.json
+82 silly cache add args [ 'redux-localstorage@rc', null ]
+83 verbose cache add spec redux-localstorage@rc
+84 silly cache add parsed spec Result {
+84 silly cache add   raw: 'redux-localstorage@rc',
+84 silly cache add   scope: null,
+84 silly cache add   name: 'redux-localstorage',
+84 silly cache add   rawSpec: 'rc',
+84 silly cache add   spec: 'rc',
+84 silly cache add   type: 'tag' }
+85 silly addNamed redux-localstorage@rc
+86 verbose addNamed "rc" is being treated as a dist-tag for redux-localstorage
+87 info addNameTag [ 'redux-localstorage', 'rc' ]
+88 silly mapToRegistry name redux-localstorage
+89 silly mapToRegistry using default registry
+90 silly mapToRegistry registry https://registry.npmjs.org/
+91 silly mapToRegistry data Result {
+91 silly mapToRegistry   raw: 'redux-localstorage',
+91 silly mapToRegistry   scope: null,
+91 silly mapToRegistry   name: 'redux-localstorage',
+91 silly mapToRegistry   rawSpec: '',
+91 silly mapToRegistry   spec: 'latest',
+91 silly mapToRegistry   type: 'tag' }
+92 silly mapToRegistry uri https://registry.npmjs.org/redux-localstorage
+93 verbose addNameTag registry:https://registry.npmjs.org/redux-localstorage not in flight; fetching
+94 verbose request uri https://registry.npmjs.org/redux-localstorage
+95 verbose request no auth needed
+96 info attempt registry request try #1 at 8:08:17 PM
+97 verbose request id 43620544b71d79eb
+98 http request GET https://registry.npmjs.org/redux-localstorage
+99 http 200 https://registry.npmjs.org/redux-localstorage
+100 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+100 verbose headers   etag: '"8XYRDGI5A1NMYUDPCV28WDWUV"',
+100 verbose headers   'content-type': 'application/json',
+100 verbose headers   'content-encoding': 'gzip',
+100 verbose headers   'cache-control': 'max-age=300',
+100 verbose headers   'content-length': '4653',
+100 verbose headers   'accept-ranges': 'bytes',
+100 verbose headers   date: 'Tue, 09 Aug 2016 18:08:17 GMT',
+100 verbose headers   via: '1.1 varnish',
+100 verbose headers   age: '0',
+100 verbose headers   connection: 'keep-alive',
+100 verbose headers   'x-served-by': 'cache-ams4426-AMS',
+100 verbose headers   'x-cache': 'HIT',
+100 verbose headers   'x-cache-hits': '1',
+100 verbose headers   'x-timer': 'S1470766097.166211,VS0,VE108',
+100 verbose headers   vary: 'Accept-Encoding' }
+101 silly get cb [ 200,
+101 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+101 silly get     etag: '"8XYRDGI5A1NMYUDPCV28WDWUV"',
+101 silly get     'content-type': 'application/json',
+101 silly get     'content-encoding': 'gzip',
+101 silly get     'cache-control': 'max-age=300',
+101 silly get     'content-length': '4653',
+101 silly get     'accept-ranges': 'bytes',
+101 silly get     date: 'Tue, 09 Aug 2016 18:08:17 GMT',
+101 silly get     via: '1.1 varnish',
+101 silly get     age: '0',
+101 silly get     connection: 'keep-alive',
+101 silly get     'x-served-by': 'cache-ams4426-AMS',
+101 silly get     'x-cache': 'HIT',
+101 silly get     'x-cache-hits': '1',
+101 silly get     'x-timer': 'S1470766097.166211,VS0,VE108',
+101 silly get     vary: 'Accept-Encoding' } ]
+102 verbose get saving redux-localstorage to /home/davebitter/.npm/registry.npmjs.org/redux-localstorage/.cache.json
+103 verbose correctMkdir /home/davebitter/.npm correctMkdir not in flight; initializing
+104 silly addNameTag next cb for redux-localstorage with tag rc
+105 silly addNamed redux-localstorage@1.0.0-rc5
+106 verbose addNamed "1.0.0-rc5" is a plain semver version for redux-localstorage
+107 silly mapToRegistry name redux-localstorage
+108 silly mapToRegistry using default registry
+109 silly mapToRegistry registry https://registry.npmjs.org/
+110 silly mapToRegistry data Result {
+110 silly mapToRegistry   raw: 'redux-localstorage',
+110 silly mapToRegistry   scope: null,
+110 silly mapToRegistry   name: 'redux-localstorage',
+110 silly mapToRegistry   rawSpec: '',
+110 silly mapToRegistry   spec: 'latest',
+110 silly mapToRegistry   type: 'tag' }
+111 silly mapToRegistry uri https://registry.npmjs.org/redux-localstorage
+112 verbose addRemoteTarball https://registry.npmjs.org/redux-localstorage/-/redux-localstorage-1.0.0-rc5.tgz not in flight; adding
+113 verbose addRemoteTarball [ 'https://registry.npmjs.org/redux-localstorage/-/redux-localstorage-1.0.0-rc5.tgz',
+113 verbose addRemoteTarball   '7067bc4cb0b03b5c791025ac33dde6175d50d5d1' ]
+114 info retry fetch attempt 1 at 8:08:17 PM
+115 info attempt registry request try #1 at 8:08:17 PM
+116 http fetch GET https://registry.npmjs.org/redux-localstorage/-/redux-localstorage-1.0.0-rc5.tgz
+117 http fetch 200 https://registry.npmjs.org/redux-localstorage/-/redux-localstorage-1.0.0-rc5.tgz
+118 silly fetchAndShaCheck shasum 7067bc4cb0b03b5c791025ac33dde6175d50d5d1
+119 verbose addTmpTarball /tmp/npm-9602-45f0cc65/registry.npmjs.org/redux-localstorage/-/redux-localstorage-1.0.0-rc5.tgz not in flight; adding
+120 verbose addTmpTarball already have metadata; skipping unpack for redux-localstorage@1.0.0-rc5
+121 verbose correctMkdir /home/davebitter/.npm correctMkdir not in flight; initializing
+122 silly cache afterAdd redux-localstorage@1.0.0-rc5
+123 verbose afterAdd /home/davebitter/.npm/redux-localstorage/1.0.0-rc5/package/package.json not in flight; writing
+124 verbose correctMkdir /home/davebitter/.npm correctMkdir not in flight; initializing
+125 verbose afterAdd /home/davebitter/.npm/redux-localstorage/1.0.0-rc5/package/package.json written
+126 silly install resolved [ { name: 'redux-localstorage',
+126 silly install resolved     version: '1.0.0-rc5',
+126 silly install resolved     description: 'Unopinionated store enhancer that persists state changes (locally).',
+126 silly install resolved     main: 'lib',
+126 silly install resolved     scripts: { prepublish: 'make test clean build', test: 'make test' },
+126 silly install resolved     files: [ 'lib', 'src' ],
+126 silly install resolved     repository:
+126 silly install resolved      { type: 'git',
+126 silly install resolved        url: 'git+https://github.com/elgerlambert/redux-localstorage.git' },
+126 silly install resolved     keywords:
+126 silly install resolved      [ 'Redux',
+126 silly install resolved        'Persist',
+126 silly install resolved        'Immutable',
+126 silly install resolved        'storage',
+126 silly install resolved        'localStorage',
+126 silly install resolved        'sessionStorage',
+126 silly install resolved        'AsyncStorage',
+126 silly install resolved        'localForage',
+126 silly install resolved        'LevelDB' ],
+126 silly install resolved     author: { name: 'Elger Lambert', email: 'elgerlambert@gmail.com' },
+126 silly install resolved     license: 'MIT',
+126 silly install resolved     bugs: { url: 'https://github.com/elgerlambert/redux-localstorage/issues' },
+126 silly install resolved     homepage: 'https://github.com/elgerlambert/redux-localstorage#readme',
+126 silly install resolved     devDependencies:
+126 silly install resolved      { babel: '^5.8.23',
+126 silly install resolved        'babel-core': '^5.8.23',
+126 silly install resolved        'babel-eslint': '^4.1.0',
+126 silly install resolved        chai: '^3.2.0',
+126 silly install resolved        eslint: '^1.3.1',
+126 silly install resolved        'eslint-config-airbnb': '0.0.8',
+126 silly install resolved        mocha: '^2.2.5' },
+126 silly install resolved     gitHead: '4eaa8d7624207330da8fbcb0d895db3a6b9ed96c',
+126 silly install resolved     _id: 'redux-localstorage@1.0.0-rc5',
+126 silly install resolved     _shasum: '7067bc4cb0b03b5c791025ac33dde6175d50d5d1',
+126 silly install resolved     _from: 'redux-localstorage@rc',
+126 silly install resolved     _npmVersion: '3.5.1',
+126 silly install resolved     _nodeVersion: '5.1.0',
+126 silly install resolved     _npmUser: { name: 'elgerlambert', email: 'elgerlambert@gmail.com' },
+126 silly install resolved     dist:
+126 silly install resolved      { shasum: '7067bc4cb0b03b5c791025ac33dde6175d50d5d1',
+126 silly install resolved        tarball: 'https://registry.npmjs.org/redux-localstorage/-/redux-localstorage-1.0.0-rc5.tgz' },
+126 silly install resolved     maintainers: [ [Object] ],
+126 silly install resolved     _npmOperationalInternal:
+126 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+126 silly install resolved        tmp: 'tmp/redux-localstorage-1.0.0-rc5.tgz_1465918064943_0.5403745390940458' },
+126 silly install resolved     directories: {},
+126 silly install resolved     _resolved: 'https://registry.npmjs.org/redux-localstorage/-/redux-localstorage-1.0.0-rc5.tgz' } ]
+127 info install redux-localstorage@1.0.0-rc5 into /home/davebitter/Documents/react
+128 info installOne redux-localstorage@1.0.0-rc5
+129 verbose installOne of redux-localstorage to /home/davebitter/Documents/react not in flight; installing
+130 verbose correctMkdir /home/davebitter/.npm/_locks correctMkdir not in flight; initializing
+131 verbose lock using /home/davebitter/.npm/_locks/redux-localstorage-65956a8228351178.lock for /home/davebitter/Documents/react/node_modules/redux-localstorage
+132 silly install write writing redux-localstorage 1.0.0-rc5 to /home/davebitter/Documents/react/node_modules/redux-localstorage
+133 verbose unbuild node_modules/redux-localstorage
+134 silly gentlyRm /home/davebitter/Documents/react/node_modules/redux-localstorage is being purged from base /home/davebitter/Documents/react
+135 verbose gentlyRm don't care about contents; nuking /home/davebitter/Documents/react/node_modules/redux-localstorage
+136 verbose tar unpack /home/davebitter/.npm/redux-localstorage/1.0.0-rc5/package.tgz
+137 verbose tar unpacking to /home/davebitter/Documents/react/node_modules/redux-localstorage
+138 silly gentlyRm /home/davebitter/Documents/react/node_modules/redux-localstorage is being purged
+139 verbose gentlyRm don't care about contents; nuking /home/davebitter/Documents/react/node_modules/redux-localstorage
+140 silly gunzTarPerm modes [ '775', '664' ]
+141 silly gunzTarPerm extractEntry package.json
+142 silly gunzTarPerm modified mode [ 'package.json', 420, 436 ]
+143 silly gunzTarPerm extractEntry README.md
+144 silly gunzTarPerm modified mode [ 'README.md', 420, 436 ]
+145 silly gunzTarPerm extractEntry LICENSE.md
+146 silly gunzTarPerm modified mode [ 'LICENSE.md', 420, 436 ]
+147 silly gunzTarPerm extractEntry lib/actionTypes.js
+148 silly gunzTarPerm modified mode [ 'lib/actionTypes.js', 420, 436 ]
+149 silly gunzTarPerm extractEntry lib/bufferActions.js
+150 silly gunzTarPerm modified mode [ 'lib/bufferActions.js', 420, 436 ]
+151 silly gunzTarPerm extractEntry lib/index.js
+152 silly gunzTarPerm modified mode [ 'lib/index.js', 420, 436 ]
+153 silly gunzTarPerm extractEntry lib/mergePersistedState.js
+154 silly gunzTarPerm modified mode [ 'lib/mergePersistedState.js', 420, 436 ]
+155 silly gunzTarPerm extractEntry lib/persistState.js
+156 silly gunzTarPerm modified mode [ 'lib/persistState.js', 420, 436 ]
+157 silly gunzTarPerm extractEntry lib/persistStateMiddleware.js
+158 silly gunzTarPerm modified mode [ 'lib/persistStateMiddleware.js', 420, 436 ]
+159 silly gunzTarPerm extractEntry lib/transformState.js
+160 silly gunzTarPerm modified mode [ 'lib/transformState.js', 420, 436 ]
+161 silly gunzTarPerm extractEntry lib/adapters/AsyncStorage/adapter.js
+162 silly gunzTarPerm modified mode [ 'lib/adapters/AsyncStorage/adapter.js', 420, 436 ]
+163 silly gunzTarPerm extractEntry lib/adapters/AsyncStorage/index.js
+164 silly gunzTarPerm modified mode [ 'lib/adapters/AsyncStorage/index.js', 420, 436 ]
+165 silly gunzTarPerm extractEntry lib/adapters/levelDB/adapter.js
+166 silly gunzTarPerm modified mode [ 'lib/adapters/levelDB/adapter.js', 420, 436 ]
+167 silly gunzTarPerm extractEntry lib/adapters/levelDB/index.js
+168 silly gunzTarPerm modified mode [ 'lib/adapters/levelDB/index.js', 420, 436 ]
+169 silly gunzTarPerm extractEntry lib/adapters/localForage/adapter.js
+170 silly gunzTarPerm modified mode [ 'lib/adapters/localForage/adapter.js', 420, 436 ]
+171 silly gunzTarPerm extractEntry lib/adapters/localForage/index.js
+172 silly gunzTarPerm modified mode [ 'lib/adapters/localForage/index.js', 420, 436 ]
+173 silly gunzTarPerm extractEntry lib/adapters/localStorage/adapter.js
+174 silly gunzTarPerm modified mode [ 'lib/adapters/localStorage/adapter.js', 420, 436 ]
+175 silly gunzTarPerm extractEntry lib/adapters/localStorage/index.js
+176 silly gunzTarPerm modified mode [ 'lib/adapters/localStorage/index.js', 420, 436 ]
+177 silly gunzTarPerm extractEntry lib/adapters/sessionStorage/adapter.js
+178 silly gunzTarPerm modified mode [ 'lib/adapters/sessionStorage/adapter.js', 420, 436 ]
+179 silly gunzTarPerm extractEntry lib/adapters/sessionStorage/index.js
+180 silly gunzTarPerm modified mode [ 'lib/adapters/sessionStorage/index.js', 420, 436 ]
+181 silly gunzTarPerm extractEntry src/actionTypes.js
+182 silly gunzTarPerm modified mode [ 'src/actionTypes.js', 420, 436 ]
+183 silly gunzTarPerm extractEntry src/bufferActions.js
+184 silly gunzTarPerm modified mode [ 'src/bufferActions.js', 420, 436 ]
+185 silly gunzTarPerm extractEntry src/index.js
+186 silly gunzTarPerm modified mode [ 'src/index.js', 420, 436 ]
+187 silly gunzTarPerm extractEntry src/mergePersistedState.js
+188 silly gunzTarPerm modified mode [ 'src/mergePersistedState.js', 420, 436 ]
+189 silly gunzTarPerm extractEntry src/persistState.js
+190 silly gunzTarPerm modified mode [ 'src/persistState.js', 420, 436 ]
+191 silly gunzTarPerm extractEntry src/persistStateMiddleware.js
+192 silly gunzTarPerm modified mode [ 'src/persistStateMiddleware.js', 420, 436 ]
+193 silly gunzTarPerm extractEntry src/transformState.js
+194 silly gunzTarPerm modified mode [ 'src/transformState.js', 420, 436 ]
+195 silly gunzTarPerm extractEntry src/__tests__/mergePersistedState-test.js
+196 silly gunzTarPerm modified mode [ 'src/__tests__/mergePersistedState-test.js', 420, 436 ]
+197 silly gunzTarPerm extractEntry src/adapters/AsyncStorage/adapter.js
+198 silly gunzTarPerm modified mode [ 'src/adapters/AsyncStorage/adapter.js', 420, 436 ]
+199 silly gunzTarPerm extractEntry src/adapters/AsyncStorage/index.js
+200 silly gunzTarPerm modified mode [ 'src/adapters/AsyncStorage/index.js', 420, 436 ]
+201 silly gunzTarPerm extractEntry src/adapters/levelDB/adapter.js
+202 silly gunzTarPerm modified mode [ 'src/adapters/levelDB/adapter.js', 420, 436 ]
+203 silly gunzTarPerm extractEntry src/adapters/levelDB/index.js
+204 silly gunzTarPerm modified mode [ 'src/adapters/levelDB/index.js', 420, 436 ]
+205 silly gunzTarPerm extractEntry src/adapters/localForage/adapter.js
+206 silly gunzTarPerm modified mode [ 'src/adapters/localForage/adapter.js', 420, 436 ]
+207 silly gunzTarPerm extractEntry src/adapters/localForage/index.js
+208 silly gunzTarPerm modified mode [ 'src/adapters/localForage/index.js', 420, 436 ]
+209 silly gunzTarPerm extractEntry src/adapters/localStorage/adapter.js
+210 silly gunzTarPerm modified mode [ 'src/adapters/localStorage/adapter.js', 420, 436 ]
+211 silly gunzTarPerm extractEntry src/adapters/localStorage/index.js
+212 silly gunzTarPerm modified mode [ 'src/adapters/localStorage/index.js', 420, 436 ]
+213 silly gunzTarPerm extractEntry src/adapters/sessionStorage/adapter.js
+214 silly gunzTarPerm modified mode [ 'src/adapters/sessionStorage/adapter.js', 420, 436 ]
+215 silly gunzTarPerm extractEntry src/adapters/sessionStorage/index.js
+216 silly gunzTarPerm modified mode [ 'src/adapters/sessionStorage/index.js', 420, 436 ]
+217 verbose write writing to /home/davebitter/Documents/react/node_modules/redux-localstorage/package.json
+218 info preinstall redux-localstorage@1.0.0-rc5
+219 verbose readDependencies loading dependencies from /home/davebitter/Documents/react/node_modules/redux-localstorage/package.json
+220 verbose readDependencies loading dependencies from /home/davebitter/Documents/react/node_modules/redux-localstorage/package.json
+221 silly install resolved []
+222 verbose about to build /home/davebitter/Documents/react/node_modules/redux-localstorage
+223 info build /home/davebitter/Documents/react/node_modules/redux-localstorage
+224 info linkStuff redux-localstorage@1.0.0-rc5
+225 silly linkStuff redux-localstorage@1.0.0-rc5 has /home/davebitter/Documents/react/node_modules as its parent node_modules
+226 verbose linkBins redux-localstorage@1.0.0-rc5
+227 verbose linkMans redux-localstorage@1.0.0-rc5
+228 verbose rebuildBundles redux-localstorage@1.0.0-rc5
+229 info install redux-localstorage@1.0.0-rc5
+230 info postinstall redux-localstorage@1.0.0-rc5
+231 verbose unlock done using /home/davebitter/.npm/_locks/redux-localstorage-65956a8228351178.lock for /home/davebitter/Documents/react/node_modules/redux-localstorage
+232 verbose validateInstall loading /home/davebitter/Documents/react/package.json for validation
+233 verbose stack Error: The package webpack@2.1.0-beta.8 does not satisfy its siblings' peerDependencies requirements!
+233 verbose stack     at /home/davebitter/.nvm/versions/node/v4.4.6/lib/node_modules/npm/lib/install.js:125:32
+233 verbose stack     at /home/davebitter/.nvm/versions/node/v4.4.6/lib/node_modules/npm/lib/install.js:268:7
+233 verbose stack     at /home/davebitter/.nvm/versions/node/v4.4.6/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+233 verbose stack     at /home/davebitter/.nvm/versions/node/v4.4.6/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+233 verbose stack     at cb (/home/davebitter/.nvm/versions/node/v4.4.6/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+233 verbose stack     at /home/davebitter/.nvm/versions/node/v4.4.6/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+233 verbose stack     at cb (/home/davebitter/.nvm/versions/node/v4.4.6/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+233 verbose stack     at /home/davebitter/.nvm/versions/node/v4.4.6/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+233 verbose stack     at cb (/home/davebitter/.nvm/versions/node/v4.4.6/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+233 verbose stack     at /home/davebitter/.nvm/versions/node/v4.4.6/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+234 verbose cwd /home/davebitter/Documents/react
+235 error Linux 4.4.0-28-generic
+236 error argv "/home/davebitter/.nvm/versions/node/v4.4.6/bin/node" "/home/davebitter/.nvm/versions/node/v4.4.6/bin/npm" "install" "--save" "redux-localstorage@rc"
+237 error node v4.4.6
+238 error npm  v2.15.5
+239 error code EPEERINVALID
+240 error peerinvalid The package webpack@2.1.0-beta.8 does not satisfy its siblings' peerDependencies requirements!
+240 error peerinvalid Peer babel-loader@6.2.4 wants webpack@1 || ^2.1.0-beta
+240 error peerinvalid Peer extract-text-webpack-plugin@1.0.1 wants webpack@^1.9.11
+240 error peerinvalid Peer karma-webpack@1.8.0 wants webpack@^1.1.0 || ^2 || ^2.1.0-beta
+240 error peerinvalid Peer webpack-dev-middleware@1.6.1 wants webpack@1 || ^2.1.0-beta
+240 error peerinvalid Peer html-webpack-plugin@2.22.0 wants webpack@*
+241 verbose exit [ 1, true ]
