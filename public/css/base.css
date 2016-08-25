@@ -1,11 +1,11 @@
 .boxRow {
-  background-color: #bbb;
-  float: left;
+  margin-top: 5em;
 }
 
 .box {
   float: left;
   margin: 2em;
+
 }
 
 .boxTitle {
@@ -14,16 +14,47 @@
 
 .boxCard {
   height: 10vh;
+  padding-top: 22.5px;
+
 }
 
 li {
   list-style-type: none;
-  margin-left: 1em;
-  margin-right: 1em;
+
+  text-align: center;
 }
 
-button {
+
+button.remove {
+  width: 100%;
+}
+
+input.hex {
+  width: 100%;
+  text-align: center
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+
+.panel-heading {
+  background-color: #fff!important;
+}
+
+.hide-input {
+  opacity: 0;
+  width: 12px;
+}
+
+.btn-copy {
+  padding:3px 5px;
   float: right;
   background-color: #fff;
-  width: 100px;
+  color: #666
+}
+
+.fa {
+  margin-right: 5px;
 }

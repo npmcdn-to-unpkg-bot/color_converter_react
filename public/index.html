@@ -8,6 +8,9 @@
 		<script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
 		<script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+
 		<script src="https://npmcdn.com/remarkable@1.6.2/dist/remarkable.min.js"></script>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -16,7 +19,15 @@
 
 	<body>
 		<div id="content" class="col-md-12"</div>
-
+		 <script>
+		    var clipboard = new Clipboard('.btn');
+		    clipboard.on('success', function(e) {
+		        console.log(e);
+		    });
+		    clipboard.on('error', function(e) {
+		        console.log(e);
+		    });
+    </script>
 
 		<script type="text/babel">
 				var BoxRow = React.createClass ({
@@ -25,7 +36,8 @@
 
               return {
                   cards: [
-                    {id: 0, title: 'Card-1', hex: hex, rgb: ColorConverter(hex)},
+                    {id: 0, title: 'Card-0', hex: hex, rgb: HexConverter(hex)},
+
 									
                   ]  
               };
@@ -46,25 +58,35 @@
 					_handleAdd: function() {
 						var cards = this.state.cards;
 
-						this.state.cardCount = this.state.cards.length + 1;
+						
 						var title = this.state.cardCount;
 						var id = this.counter++;
 
 						var hex = RandomHex();
 						
-						cards.push({id: id, title: "Card-" + title, hex: hex, rgb: ColorConverter(hex)});
-						console.log(cards);
+						cards.push({id: id, title: "Card-" + id, hex: hex, rgb: HexConverter(hex)});
 
 						this.setState({cards: cards});
+					},
+					_handleDelete: function (cardToDelete) {
+						this.counter--
+
+
+						var cards = this.state.cards;
+						var cards = _.reject(cards,function(card){return card.id === cardToDelete.id });
+
+						this.setState({cards: cards});
+
 					},
 					_handleClear: function() {
 						var cards = this.state.cards;
 						var hex = RandomHex();
+						this.counter = 1;
 
 
 						this.state.cardCount = this.state.cards.length + 1;
 						
-						cards = [{title: "Card-1", hex: hex, rgb: ColorConverter(hex)}];
+						cards = [{title: "Card-0", hex: hex, rgb: HexConverter(hex)}];
 
 						this.setState({cards: cards});
 					},
@@ -72,13 +94,15 @@
 					render: function() {
 						var that = this;
 						return(
-								<div className="boxRow col-md-10 col-md-offset-1">
-								<div className="row">
-									<button onClick={that._handleAdd}>Add</button>
-									<button onClick={that._handleClear}>Clear</button>
+								<div className="boxRow col-md-10 col-md-offset-1 panel panel-default">
+								<div className="panel-heading">Color_Converter_2.0</div>
+								<div className="panel-body">
+									<button className="pull-right btn btn-default" onClick={that._handleAdd}>Add</button>
+									<button className="pull-right btn btn-default" onClick={that._handleClear}>Clear</button>
+
 								</div>
 								{this.state.cards.map(function(card, key) {
-									return <Box onUpdate={that._handleUpdate} card={card}  key={key}/> ;
+									return <Box onDelete={that._handleDelete} onUpdate={that._handleUpdate} card={card}  key={key}/> ;
                 })}
 									
 								</div>
@@ -88,10 +112,19 @@
 
 				var Box = React.createClass ({
 					_handleUpdate: function(index, content) {
+
 						var card = this.props.card
+						console.log(content)
+						if (index === "hex") {card.rgb =  HexConverter(card.hex)};
+						if (index === "rgb") {card.hex =  RgbConverter(content)}
 						card[index] = content
-						card.rgb =  ColorConverter(card.hex)
+				
 						this.props.onUpdate(card.id, card)
+						console.log(card);
+					},
+					_removeCard: function() {
+						var cardToDelete = this.props.card;
+						this.props.onDelete(cardToDelete);
 					},
 					
 					render: function() {
@@ -99,8 +132,10 @@
 						return(
 								<div  className="box">
 									<BoxTitle onUpdate={function(newTitle){ that._handleUpdate("title", newTitle) }} title={this.props.card.title} />
+									<button onClick={that._removeCard} className="remove btn btn-default">Delete</button>
 									<BoxCard card={this.props.card} />
-									<BoxInput onUpdate={function(newHex){ that._handleUpdate("hex", newHex) }} />
+									<BoxInput Placeholder="hex" onUpdate={function(newHex){ that._handleUpdate("hex", newHex) }} />
+									<BoxInput Placeholder="rgb" onUpdate={function(newRgb){ that._handleUpdate("rgb", newRgb) }} />
 								</div>
 						);
 					}
@@ -113,7 +148,11 @@
 					},
 					render: function() {
 						return(
-								<input className="boxTitle" value={this.props.title} onChange={this._handleChange} maxLength="20" />
+							<div className="form-group">
+							  <input className="boxTitle form-control" value={this.props.title} onChange={this._handleChange} maxLength="20" />
+							</div>
+							
+								
 						);
 					}
 				});
@@ -121,11 +160,26 @@
 				var BoxCard = React.createClass ({
 					render: function() {
 						var style = { backgroundColor: "#" + this.props.card.hex };
+						var selectHex = this.props.card.title + "hex";
+						var idSelectHex = "#" + selectHex;
+						var selectRgb = this.props.card.title + "Rgb";
+						var idSelectRgb = "#" + selectRgb;
+						
 
 						return(
-								<div className="boxCard" style={style}>
+								<div className="boxCard" style={style} >
 									<li>#{this.props.card.hex}</li>
-									<li>{this.props.card.rgb}</li>
+									<li>rgb({this.props.card.rgb})</li>
+									
+									<input className="hide-input" id={selectHex} value={this.props.card.hex} />
+									<input className="hide-input" id={selectRgb} value={this.props.card.rgb} />
+									<button className="btn btn-copy" data-clipboard-target={idSelectHex}>
+									<i className="fa fa-clipboard"></i>hex
+									</button>
+									
+									<button className="btn btn-copy" data-clipboard-target={idSelectRgb}>
+									<i className="fa fa-clipboard"></i>rgb
+									</button>
 									
 								</div>
 						);
@@ -139,23 +193,42 @@
 					render: function() {
 
 						return(
-								<input onChange={this.handleInput} maxLength="6"></input>
+
+								<div className="form-group">
+							 <input placeholder={this.props.Placeholder} className="hex form-control" onChange={this.handleInput}></input>
+
+							</div>
 						);
 					}
 				});
 
-				var ColorConverter = function(hex) {
+				var HexConverter = function(hex) {
           var r = parseInt(hex.substring(0,2), 16);
           var g = parseInt(hex.substring(2,4), 16);
           var b = parseInt(hex.substring(4,6), 16);
 
-          var result = 'rgb('+r+','+g+','+b+')';
-          var noResult = "No Valid RGB";
+          var result = +r+','+g+','+b;
+          var noResult = "No Valid Hex Entered";
           if (result.search("NaN") === -1) {
             return result;
           } else {
             return noResult;
           }
+       }
+
+       var RgbConverter = function(rgb) {
+       	console.log("hi", rgb)
+       	var rgb = rgb.split(",")
+       	var r = rgb[0];
+       	var g = rgb[1];
+       	var b = rgb[2];
+       	var rgb = b | (g << 8) | (r << 16);
+
+       	if (r > 255 || g > 255 || b > 255) {return rgb = "No Valid RGB Entered";}
+       	else {return (0x1000000 + rgb).toString(16).slice(1)}
+        
+
+
        }
 
        var RandomHex = function() {
