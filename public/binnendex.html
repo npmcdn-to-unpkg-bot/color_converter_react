@@ -1,0 +1,158 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>hex_to_rgb_converter_react</title>
+    <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+    <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+    <script src="https://npmcdn.com/jquery@3.1.0/dist/jquery.min.js"></script>
+    <script src="https://npmcdn.com/remarkable@1.6.2/dist/remarkable.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/base.css">
+  </head>
+
+  <body>
+    <div id="content" class="col-md-12"</div>
+
+
+    <script type="text/babel">
+
+        // this.state.colors.map(function(color, key) {
+        //  console.log("haaaallo??", color, key);
+        //// <ColorBox key={key} color={color} onChange={this.asdfsdfasdf} />  
+        // });
+
+        var BoxRow = React.createClass ({
+          getInitialState: function() {
+              return {
+                  colors: [
+                    {color: 'FF5321', rgbcolor: ColorConverter("FF5324")},
+                    {color: 'FF5322', rgbcolor: ColorConverter("FF5324")},
+                    {color: 'FF5323', rgbcolor: ColorConverter("FF5324")},
+                    {color: 'FF5324', rgbcolor: ColorConverter("FF5324")}
+                  ]  
+              };
+          },
+
+          changeColor: function() {
+            console.log("joepie!");
+          },
+
+          render: function() {
+            var that = this;
+            return(
+                <div className="boxRow">
+                  <CardTitle />
+                  {this.state.colors.map(function(color, key) {
+                      return <ColorBox key={key} color={color.color} rgbcolor={color.rgbcolor} onColorChange={that.changeColor} />;
+                  })}
+                </div>
+              );
+          }
+        });
+
+       var CardTitle = React.createClass ({
+        render: function() {
+          return (
+              <div className="cardTitleContainer">
+                <h1 className="cardTitle">hex_to_rgb_converter_react</h1>
+                <h2 className="cardSup">By Dave Bitter</h2>
+              </div>
+            );
+        }
+       });
+
+       var ColorBox = React.createClass ({
+
+        getInitialState: function() {
+            return {color: 'FF5324', rgbcolor: ColorConverter("FF5324")};
+          },
+        render: function() {
+          return (
+              <div className="colorBox col-md-2">
+                
+                <ColorSquare  bgColor={this.props.color} rgbcolor={this.props.rgbcolor} />
+                <ColorInput color={this.props.color} onAdd={this._handleClicker} onColorChange={this._colorChange}/>
+              </div>
+            );
+        },
+        _handleClicker: function(color) {
+          this.setState({
+            color:color
+          })
+        },
+
+         _colorChange: function(rgbcolor) {
+          // this.setState({
+          //   rgbcolor:rgbcolor
+          // })
+          this.props.onColorChange(rgbcolor);
+        }
+
+       });
+
+
+       var ColorSquare = React.createClass ({
+          render: function() {
+            var derp = {
+              backgroundColor:"#" + this.props.bgColor
+            }
+          return (
+              <div className="colorSquare" style={derp}>
+              <div className="colorValues">
+                <h1 className="hex text-center">{this.props.bgColor}</h1>
+                <h1 className="rgb text-center">{this.props.rgbcolor}</h1>
+                </div>
+              </div>
+            );
+        }
+       });
+
+       var ColorConverter = function(hex) {
+          var r = parseInt(hex.substring(0,2), 16);
+          var g = parseInt(hex.substring(2,4), 16);
+          var b = parseInt(hex.substring(4,6), 16);
+
+          var result = 'rgb('+r+','+g+','+b+')';
+          var noResult = "No Valid RGB";
+          if (result.search("NaN") === -1) {
+            return result;
+          } else {
+            return noResult;
+          }
+       }
+
+       var ColorInput = React.createClass ({
+       
+        getInitialState: function() {
+            return {bgColor: ''};
+          },
+        handleColorChange: function(e) {
+            // this.setState({bgColor:e.target.value});
+            this.props.onAdd(e.target.value)
+            var rgb = ColorConverter(e.target.value);
+            if (rgb) this.props.onColorChange(rgb)
+            
+          },
+        render: function() {
+          return (
+            <div className="input-group">
+              <span className="input-group-addon">#</span>
+              <input className="colorInput form-control" onChange={this.handleColorChange} autoFocus="autoFocus" maxLength="6" type="text"  />
+            </div>
+          );
+        }
+       });
+
+      ReactDOM.render(
+          <BoxRow />,
+          document.getElementById('content')
+        );
+
+    </script>
+  </body>
+</html>
+

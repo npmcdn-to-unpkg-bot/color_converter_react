@@ -1,99 +1,150 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>hex_to_rgb_converter_react</title>
-    <script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
-    <script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
-    <script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
-    <script src="https://npmcdn.com/jquery@3.1.0/dist/jquery.min.js"></script>
-    <script src="https://npmcdn.com/remarkable@1.6.2/dist/remarkable.min.js"></script>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<head>
+		<meta charset="utf-8" />
+		<title>Cards</title>
+		<script src="https://npmcdn.com/react@15.3.0/dist/react.js"></script>
+		<script src="https://npmcdn.com/react-dom@15.3.0/dist/react-dom.js"></script>
+		<script src="https://npmcdn.com/babel-core@5.8.38/browser.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+		<script src="https://npmcdn.com/remarkable@1.6.2/dist/remarkable.min.js"></script>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/base.css">
-  </head>
+		<link rel="stylesheet" href="/css/base.css">
+	</head>
 
-  <body>
-    <div id="content" class="col-md-12"</div>
-
-
-    <script type="text/babel">
-
-        var BoxRow = React.createClass ({
-          render: function() {
-            return(
-                <div className="boxRow">
-                  <CardTitle />
-                  <ColorBox />
-                  <ColorBox />
-                  <ColorBox />
-                  <ColorBox />
-                  <ColorBox />
-
-                </div>
-              );
-          }
-        });
+	<body>
+		<div id="content" class="col-md-12"</div>
 
 
-       var ColorBox = React.createClass ({
+		<script type="text/babel">
+				var BoxRow = React.createClass ({
+					getInitialState: function() {
+							var hex = RandomHex();
 
-        getInitialState: function() {
-            return {color: 'FF5324', rgbcolor: ColorConverter("FF5324")};
+              return {
+                  cards: [
+                    {id: 0, title: 'Card-1', hex: hex, rgb: ColorConverter(hex)},
+									
+                  ]  
+              };
           },
-        render: function() {
-          console.log(this.state.color, this.state.rgbcolor);
-          return (
-              <div className="colorBox col-md-2">
-                
-                <ColorSquare  bgColor={this.state.color} rgbcolor={this.state.rgbcolor} />
-                <ColorInput onAdd={this._handleClicker} onColorChange={this._colorChange}/>
-              </div>
-            );
-        },
-        _handleClicker: function(color) {
-          this.setState({
-            color:color
-          })
-        },
+          componentDidMount: function() {
+             this.counter = 1;
+          },
 
-         _colorChange: function(rgbcolor) {
-          this.setState({
-            rgbcolor:rgbcolor
-          })
-        }
+					_handleUpdate: function(id, newContent) {
+						var cards = this.state.cards;
+						var card = _.find(cards, {id : id});
+						_.extend(card, newContent);
+						this.setState({cards: cards});
+					
 
-       });
+					},
 
-       var CardTitle = React.createClass ({
-        render: function() {
-          return (
-              <div className="cardTitleContainer">
-                <h1 className="cardTitle">hex_to_rgb_converter_react</h1>
-                <h2 className="cardSup">By Dave Bitter</h2>
-              </div>
-            );
-        }
-       });
+					_handleAdd: function() {
+						var cards = this.state.cards;
 
-       var ColorSquare = React.createClass ({
-          render: function() {
-            var derp = {
-              backgroundColor:"#" + this.props.bgColor
-            }
-          return (
-              <div className="colorSquare" style={derp}>
-              <div className="colorValues">
-                <h1 className="hex text-center">{this.props.bgColor}</h1>
-                <h1 className="rgb text-center">{this.props.rgbcolor}</h1>
-                </div>
-              </div>
-            );
-        }
-       });
+						this.state.cardCount = this.state.cards.length + 1;
+						var title = this.state.cardCount;
+						var id = this.counter++;
 
-       var ColorConverter = function(hex) {
+						var hex = RandomHex();
+						
+						cards.push({id: id, title: "Card-" + title, hex: hex, rgb: ColorConverter(hex)});
+						console.log(cards);
+
+						this.setState({cards: cards});
+					},
+					_handleClear: function() {
+						var cards = this.state.cards;
+						var hex = RandomHex();
+
+
+						this.state.cardCount = this.state.cards.length + 1;
+						
+						cards = [{title: "Card-1", hex: hex, rgb: ColorConverter(hex)}];
+
+						this.setState({cards: cards});
+					},
+     
+					render: function() {
+						var that = this;
+						return(
+								<div className="boxRow col-md-10 col-md-offset-1">
+								<div className="row">
+									<button onClick={that._handleAdd}>Add</button>
+									<button onClick={that._handleClear}>Clear</button>
+								</div>
+								{this.state.cards.map(function(card, key) {
+									return <Box onUpdate={that._handleUpdate} card={card}  key={key}/> ;
+                })}
+									
+								</div>
+						);
+					}
+				});
+
+				var Box = React.createClass ({
+					_handleUpdate: function(index, content) {
+						var card = this.props.card
+						card[index] = content
+						card.rgb =  ColorConverter(card.hex)
+						this.props.onUpdate(card.id, card)
+					},
+					
+					render: function() {
+						var that = this
+						return(
+								<div  className="box">
+									<BoxTitle onUpdate={function(newTitle){ that._handleUpdate("title", newTitle) }} title={this.props.card.title} />
+									<BoxCard card={this.props.card} />
+									<BoxInput onUpdate={function(newHex){ that._handleUpdate("hex", newHex) }} />
+								</div>
+						);
+					}
+				});
+
+				var BoxTitle = React.createClass ({
+					_handleChange: function(e){
+						this.props.onUpdate(e.target.value);
+						
+					},
+					render: function() {
+						return(
+								<input className="boxTitle" value={this.props.title} onChange={this._handleChange} maxLength="20" />
+						);
+					}
+				});
+
+				var BoxCard = React.createClass ({
+					render: function() {
+						var style = { backgroundColor: "#" + this.props.card.hex };
+
+						return(
+								<div className="boxCard" style={style}>
+									<li>#{this.props.card.hex}</li>
+									<li>{this.props.card.rgb}</li>
+									
+								</div>
+						);
+					}
+				});
+
+				var BoxInput = React.createClass ({
+					handleInput: function(e) {
+          	this.props.onUpdate(e.target.value);
+          },
+					render: function() {
+
+						return(
+								<input onChange={this.handleInput} maxLength="6"></input>
+						);
+					}
+				});
+
+				var ColorConverter = function(hex) {
           var r = parseInt(hex.substring(0,2), 16);
           var g = parseInt(hex.substring(2,4), 16);
           var b = parseInt(hex.substring(4,6), 16);
@@ -107,37 +158,24 @@
           }
        }
 
-       var ColorInput = React.createClass ({
-       
-        getInitialState: function() {
-            return {bgColor: ''};
-          },
-        handleColorChange: function(e) {
-            this.setState({bgColor:e.target.value});
-            this.props.onAdd(e.target.value)
-            var rgb = ColorConverter(e.target.value);
-            if (rgb) this.props.onColorChange(rgb)
-            
-          },
-        render: function() {
-          return (
-     
-            <div className="input-group">
-            <span className="input-group-addon">#</span>
-              <input className="colorInput form-control" onChange={this.handleColorChange} autoFocus="autoFocus" maxLength="6" >
-                  
-              </input>
-            </div>
-            );
-        }
-       });
+       var RandomHex = function() {
+       		 var hex = "";
+				   var characters = "abcdef0123456789";
 
-      ReactDOM.render(
-          <BoxRow />,
-          document.getElementById('content')
-        );
+				    for( var i=0; i < 6; i++ )
+				        hex += characters.charAt(Math.floor(Math.random() * characters.length));
 
-    </script>
-  </body>
+				    return hex;
+       }
+
+			 
+
+			ReactDOM.render(
+					<BoxRow />,
+					document.getElementById('content')
+				);
+
+		</script>
+	</body>
 </html>
 

@@ -1,58 +1,29 @@
-body {
-  background-image: url("/images/bg-pattern.png");
-  background-repeat: repeat-x repeat-y;
-}
-
-h1 {
-  font-size: 3em;
-}
-
-h1.cardTitle {
-  margin-top: 0;
-  margin-bottom: 30px;
+.boxRow {
+  background-color: #bbb;
   float: left;
 }
 
-h2.cardSup {
-font-size: 1.3em;
-text-align: right;
-padding-top: 1.3em;
+.box {
+  float: left;
+  margin: 2em;
 }
 
-h1.hex:before {
-  content: "#";
+.boxTitle {
+  background-color: #ddd;
 }
 
-.cardTitleContainer {
-  height: 100px;
+.boxCard {
+  height: 10vh;
 }
 
+li {
+  list-style-type: none;
+  margin-left: 1em;
+  margin-right: 1em;
+}
 
-#content {
-  margin-top: 10em;
+button {
+  float: right;
   background-color: #fff;
+  width: 100px;
 }
-
-.colorBox {
-  margin: 50px 0px 30px;
-}
-
-.colorSquare {
-  height: 50vh;
-  transition: 1s;
-}
-
-.colorValues {
-  height: 5em;
-  padding-top: 15em;
-}
-
-input {
-  height: 10vh!important;
-}
-
-
-.input-group > * {
-  font-size: 5em;
-}
-
